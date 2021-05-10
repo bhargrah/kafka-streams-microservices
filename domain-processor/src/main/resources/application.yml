@@ -1,11 +1,11 @@
 spring.cloud.stream:
   function:
-    definition: domainProcessor
+    definition: domainProcessor # method name which will be called
   bindings:
     domainProcessor-in-0:
-      destination: web-domains
+      destination: web-domain # messages will be read from this topic
     domainProcessor-out-0:
-      destination: active.web-domains
+      destination: active.web-domains # messages will be put on this topic
   kafka:
     bindings:
       domainProcessor-in-0:
@@ -20,5 +20,5 @@ spring.cloud.stream:
               serializer: org.springframework.kafka.support.serializer.JsonSerializer
     binder:
       brokers:
-        - localhost:9091
-        - localhost:9092
+        - localhost:9091 # broker 1
+        - localhost:9092 # broker 2

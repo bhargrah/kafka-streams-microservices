@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/domain")
 public class DomainCrawlerController {
 
-  private DomainCrawlerService domainCrawlerService;
+    private DomainCrawlerService domainCrawlerService;
 
-  public DomainCrawlerController(DomainCrawlerService domainCrawlerService) {
-    this.domainCrawlerService = domainCrawlerService;
-  }
+    public DomainCrawlerController(DomainCrawlerService domainCrawlerService) {
+        this.domainCrawlerService = domainCrawlerService;
+    }
 
-  @GetMapping("/lookup/{name}")
-  public String lookup(@PathVariable("name") final String name) {
-    domainCrawlerService.crawl(name);
-    return "Domain crawler has scrapped your data";
-  }
+    @GetMapping("/lookup/{name}")
+    public String lookup(@PathVariable("name") final String name) {
+        domainCrawlerService.crawl(name);
+        return "Domain crawler has scrapped your data";
+    }
 }
