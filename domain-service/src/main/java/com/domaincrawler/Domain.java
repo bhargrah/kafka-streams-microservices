@@ -1,4 +1,4 @@
-package com.techprimers.domaincrawler;
+package com.domaincrawler;
 
 import java.util.Objects;
 

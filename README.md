@@ -18,6 +18,32 @@ docker-compose up -d
 docker-compose ps
 ```
 
+- Topic creation 
+```unix
+
+docker-compose exec broker kafka-topics \
+  --create \
+  --bootstrap-server localhost:9092 \
+  --replication-factor 1 \
+  --partitions 1 \
+  --topic web-domains
+  
+docker-compose exec broker kafka-topics \
+  --create \
+  --bootstrap-server localhost:9092 \
+  --replication-factor 1 \
+  --partitions 1 \
+  --topic active.web-domains
+  
+docker-compose exec broker kafka-topics \
+  --create \
+  --bootstrap-server localhost:9092 \
+  --replication-factor 1 \
+  --partitions 1 \
+  --topic inactive.web-domains    
+
+```
+
 ## Microservices
 - 'domain-crawler' - uses Spring Kafka
 - 'domain-processor' - uses Spring Cloud Stream with Kafka Streams binder

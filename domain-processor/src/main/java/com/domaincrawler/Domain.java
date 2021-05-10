@@ -1,9 +1,8 @@
-package com.techprimers.domaincrawler;
+package com.domaincrawler;
 
-import java.io.Serializable;
 import java.util.Objects;
 
-public class Domain implements Serializable  {
+public class Domain {
 
   String domain;
   String create_date;

@@ -8,7 +8,7 @@
 		<version>2.3.10.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.techprimers</groupId>
+	<groupId>com</groupId>
 	<artifactId>domain-crawler</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>domain-crawler</name>
@@ -25,6 +25,13 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

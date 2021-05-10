@@ -1,5 +1,6 @@
-package com.techprimers.domaincrawler;
+package com.domaincrawler.config;
 
+import com.domaincrawler.entity.Domain;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;

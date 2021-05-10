@@ -1,11 +1,20 @@
-package com.techprimers.domaincrawler;
+package com.domaincrawler.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 import java.util.Objects;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class DomainList {
 
-  List<Domain> domains;
+  private List<Domain> domains;
 
   @Override
   public boolean equals(Object o) {
@@ -20,18 +29,4 @@ public class DomainList {
     return Objects.hash(domains);
   }
 
-  public List<Domain> getDomains() {
-    return domains;
-  }
-
-  public void setDomains(List<Domain> domains) {
-    this.domains = domains;
-  }
-
-  public DomainList() {
-  }
-
-  public DomainList(List<Domain> domains) {
-    this.domains = domains;
-  }
 }
